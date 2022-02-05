@@ -1,5 +1,5 @@
 # Lidar_LD06_for_Arduino
-This code can use Lidar LD06　provided by LDROBOT from arduino.
+This code can use Lidar LD06 provided by LDROBOT from arduino.
 
 LDROBOT社から提供されているLD06をArduinoから使用できるようにするプログラムです。
 
@@ -66,6 +66,10 @@ ld06.read_lidar_data();
 | angles | std::vector<float> | 取得したデータの角度(deg) |
 | distances | std::vector<float> | anglesの要素に対応した距離(mm) |
 | confidences | std::vector<int> | 光の反射の強さ  |
+
+Please refer to LD06_sample.ino for how to use it. (It has been tested with Atom lite provided by M5Stack.) 
+  
+使用方法などはLD06_sample.inoを参照してください。（M5Stack社が提供するAtom liteで動作確認済みです。）
   
 # LD06(LDS06)について
 - LD06(LDS06)入手先 https://www.inno-maker.com/product/lidar-ld06/
