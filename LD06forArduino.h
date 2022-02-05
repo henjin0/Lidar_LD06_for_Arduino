@@ -16,14 +16,14 @@ class LD06forArduino
     std::vector<float> distances;
     std::vector<int> confidences;
 
-    char start_bit;
+    char start_byte;
     char data_length;
     float Speed;
     float FSA;
     float LSA;
-    int TimeStamp;
+    int time_stamp;
     int CS;
-    float angleStep;
+    float angle_step;
 
     void Init(const int pin);
     void read_lidar_data();
