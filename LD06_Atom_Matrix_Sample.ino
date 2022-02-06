@@ -27,7 +27,7 @@ float convAngle0(float angle) {
   return angle >= 180 ? -(360 - angle) : angle;
 }
 
-void TaskMotion(void *pvParameters) {
+void Task1(void *pvParameters) {
   M5.update();
   while (1) {
     //    Serial.printf("start_bytet:%d, data_length:%d, Speed:%f, FSA:%f, LSA:%f, time_stamp:%d, CS:%d",
@@ -65,15 +65,15 @@ void setup() {
   M5.begin(true, false, true);
   delay(10);
   Serial.begin(115200);
-  ld06.Init(19);
+  ld06.Init(22);
 
   vSemaphoreCreateBinary( CtlSemaphore );
   xTaskCreatePinnedToCore(
-    TaskMotion
-    ,  "TaskMotion"   // A name just for task.  任务名称
-    ,  4096  // This stack size can be checked & adjusted by reading the Stack Highwater.  可以通过阅读 Stack Highwater 来检查和调整此堆栈大小
+    Task1
+    ,  "Task1"
+    ,  4096
     ,  NULL
-    ,  2  // Priority, with 3 (configMAX_PRIORITIES - 1) being the highest, and 0 being the lowest..  优先级，3 (configMAX_PRIORITIES - 1) 最高，0 最低。
+    ,  2 
     ,  NULL
     ,  0);
 }
