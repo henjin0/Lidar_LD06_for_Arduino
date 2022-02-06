@@ -18,7 +18,7 @@ LD06forArduino.hとLD06forArduino.inoを使用するinoファイルと同じフ�
 # How to use
 
 ## void Init(const int pin)
-This is the initialization process for this program. Execute it first.
+This is the initialization function. Execute it first.
 Specify the Rx pin for receiving data from the LD06 as argument.
 
 本プログラムを使用する際には必ず最初に実行してください。
